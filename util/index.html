@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="util.css" />
+    <script src="util.js"></script>
+</head>
+<style>
+    /*  */
+    .list{
+        border-bottom: 1px solid #D8D8D8;
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+    .arrow{
+        height: 14px;
+    }
+    /* 状态线 */
+    .line-status {
+        height: 50px;
+        background: rgba(255, 255, 255, 1);
+        padding: 0 6px;
+        position: relative;
+        font-size: 13px;
+    }
+
+    .line-status table.first-start {
+        table-layout: fixed;
+        background: #FFF;
+        z-index: 999;
+        position: absolute;
+        left: 6px;
+        top: 0;
+    }
+
+    .line-status .line-status-item {
+        width: 49px;
+        float: right;
+        background: #FFF;
+        z-index: 999;
+    }
+
+    .line-status table.div-table {
+        table-layout: fixed;
+        width: calc(100% - 61px);
+        width: -moz-calc(100% - 61px);
+        width: -webkit-calc(100% - 61px);
+        position: absolute;
+        right: 6px;
+        top: 0;
+    }
+
+    .line-status table tr td {
+        text-align: center;
+        line-height: 18px;
+        padding-top: 7px;
+        color: #FF7000;
+        position: relative;
+    }
+
+    .line-status .line-through {
+        height: 24px;
+        border-bottom: 1px solid #FF7000;
+        width: calc(100% - 49px);
+        width: -moz-calc(100% - 49px);
+        width: -webkit-calc(100% - 49px);
+        position: absolute;
+        top: 0;
+        z-index: 0;
+    }
+
+    .order-again-btn {
+        display: inline-block;
+        width: 68px;
+        height: 30px;
+        background: rgba(74, 144, 238, 1);
+        border-radius: 4px;
+        font-size: 13px;
+        font-family: PingFangSC-Regular;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 1);
+        line-height: 30px;
+        text-decoration: none;
+        text-align: center;
+        margin-left: 20px;
+    }
+
+    .line-status-overtime p {
+        font-size: 13px;
+        font-family: PingFangSC-Regular;
+        font-weight: 400;
+        color: rgba(51, 51, 51, 1);
+        line-height: 50px;
+        text-align: center;
+    }
+    .line-status-not-active .line-through{
+        border-bottom: 1px solid #999999;
+    }
+    .line-status-not-active .line-status-item p{
+        color:  #999999;
+    }
+</style>
+<body>
+    <!-- 列表 -->
+    <!-- <div class="list fx-l fx-s-b">
+        <div class="fx-l">
+            <div><img src="img/goal-own@2x.png" alt="" class="v-m"></div>
+            <div>
+                <p>竞技足球投注单</p>
+                <p>昨天17点17分</p>
+            </div>
+        </div>
+        <div class="fx-l">
+            <div>有效</div>
+            <div><img src="img/right-arrow.png" alt="" class="arrow v-m"></div>
+        </div>
+    </div> -->
+    <!-- 请求数据显示 -->
+    <!-- <div class="line-status">
+        <div>
+            <table class="first-start" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>
+                        <div class="line-status-item">
+                            <p>线下</p>
+                            <p>已支付</p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <table class="div-table" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td >
+                        <div class="line-through"></div>
+                        <div class="line-status-item">
+                            <p>彩票站</p>
+                            <p>已出票</p>
+                        </div>
+                    </td>
+                    <td class="line-status-not-active">
+                        <div class="line-through"></div>
+                        <div class="line-status-item">
+                            <p>等待</p>
+                            <p>开奖</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="line-through"></div>
+                        <div class="line-status-item">
+                            <p>已开奖</p>
+                        </div>
+                    </td>
+                    <td >
+                        <div class="line-through"></div>
+                        <div class="line-status-item">
+                            <p>未中奖</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="line-through"></div>
+                        <div class="line-status-item">
+                            <p>未返奖</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="line-through"></div>
+                        <div class="line-status-item">
+                            <p>已返奖</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="line-through"></div>
+                        <div class="line-status-item">
+                            <p>已邮寄</p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div> -->
+</body>
+</html>

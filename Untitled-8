@@ -1,0 +1,44 @@
+server{
+
+	listen 8081;
+	location /{
+		proxy_pass http://localhost:8080;
+	}
+	location /web_api{
+	#	root /home/linux/Projects/MJSportsWeb/www;
+		proxy_set_header Refere "";
+		proxy_pass http://172.16.0.105/web_api;
+	}
+
+}
+
+server{
+	listen       6413;
+	listen       [::]:6413;
+	server_name  _;
+	root         /home/linux/Projects/MJSportsWeb/www;
+
+
+	location / {
+	}
+}
+
+server{
+	listen 80;#摩羯体育app
+	server_name localhost;
+
+	
+	location /a/{
+                proxy_set_header Refere "";
+                proxy_pass http://localhost:6413/;
+	}
+	location /app{
+		root /home/linux/MojieApp/app;
+	}
+
+	location /web_api {
+		proxy_set_header Referer "";
+		proxy_pass http://172.16.0.105/web_api;
+	#	proxy_pass https://sportsdebug.mojieai.com;
+	}
+}

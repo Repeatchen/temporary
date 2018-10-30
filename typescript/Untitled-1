@@ -1,0 +1,74 @@
+首先介绍typescript的优势
+其次讲类型时，上机操作。
+2015年的es6  客户端脚本语言发展方向，主流的语法
+
+ide支持，类型检查  解决开发中犯错误的几率，所有的上下文，变量，脏语言，关键字都提示出来，
+
+做修改的时候ide可以把所有的相关的关键字修改掉，
+
+angular2019年的开发语言，
+
+中间重点讲数据检查
+
+
+typings 主要是用来获取.d.ts文件。当typescript使用一个外部JavaScript库时,会需要这个文件，当然好多的编译器都用它来增加智能感知能力
+
+
+多行字符串（双撇号）
+`aaa
+bbb
+ccc`
+字符串模板 只能在双撇号执行
+
+console.log(`hello ${myname}`)
+
+自动拆分字符串
+function test(row,name,age){
+	console.log(row);
+	console.log(name);
+	console.log(age);
+
+}
+var myname = 'chen fangyu';
+var getAge = function (){
+	return 18;
+}
+
+test`hello my name is ${myname},i'm${getAge()}`
+
+参数类型
+var myName:string = 'zhang san';
+推断机制
+var age = 12;
+age = 'zhang san' 
+:any 是可以赋值任何值
+
+
+var age：number 
+var man:boolean;
+function test():void{} 不返回任何返回值
+function test():string{}
+
+方法可以定义返回值
+
+class Person{
+	name:string;
+	age:number;
+}
+var zhangsan:person = new Person();
+zhangsan.name = 'xixi';
+zhangsan.age = 18;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
